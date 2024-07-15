@@ -37,8 +37,18 @@
 .accordion-content {
   padding: 10px 20px;
 }
-aside {
-  z-index: 1;
+.tab-items::-webkit-scrollbar {
+  display: none;
+}
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  z-index: 1000 !important;
+}
+.border-color-picker {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  height: 25px;
 }
 /*! Color Picker */
 #rbgcp-inputs-wrap {

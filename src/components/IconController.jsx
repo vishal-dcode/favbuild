@@ -124,11 +124,11 @@ export default function IconPanel() {
         </div>
       </div>
 
-      <div className="bg-[#3c2aca] hover:bg-[#23148f] font-semibold grid place-items-center p-3  border-t-neutral-800 text-white">
-        <button onClick={resetValues} className="uppercase">
-          Reset
-        </button>
-      </div>
+      <button
+        onClick={resetValues}
+        className="uppercase w-full bg-[#3c2aca] hover:bg-[#23148f] font-semibold grid place-items-center p-3  border-t-neutral-800 text-white">
+        Reset Icon
+      </button>
     </div>
   );
 }

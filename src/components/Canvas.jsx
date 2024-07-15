@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { StoreContext } from '../context/storeContext';
+import { HiDownload } from 'react-icons/hi';
 import * as ReactIcons from 'react-icons/bi'; // Import all icons from react-icons/bi
 import * as heroIcons from '@heroicons/react/24/solid';
 
@@ -17,7 +18,7 @@ export default function Canvas() {
     storageValue?.iconSet === 'react' ? ReactIcons[storageValue?.iconName] : heroIcons[storageValue?.iconName];
 
   return (
-    <section className="relative w-full h-full grid place-items-center p-5">
+    <section className="relative w-full h-full grid place-items-center md:p-4 p-4 pt-10 pb-20">
       <div
         id="mainIcon"
         style={{
@@ -25,7 +26,7 @@ export default function Canvas() {
           background: `${storageValue.bgColor}`,
           border: `${storageValue.bgBorder}px solid ${storageValue.bgBorderColor}`
         }}
-        className="w-[512px] h-[512px] aspect-square bg-[#141414] grid place-items-center">
+        className="w-full h-fill sm:w-[512px] sm:h-[512px]  aspect-square bg-[#141414] grid place-items-center">
         <div style={{ transform: `rotate(${storageValue?.iconRotation}deg)` }}>
           {Icon && (
             <Icon
@@ -39,7 +40,7 @@ export default function Canvas() {
         </div>
       </div>
 
-      <button className="uppercase font-semibold text-white text-sm absolute bottom-5 right-5 border border-neutral-800 rounded-full p-3 px-5 bg-neutral-800 hover:bg-[#3c2aca]">
+      <button className="uppercase font-semibold text-white text-sm absolute bottom-4 right-4 max-md:left-20 max-md:right-20 border border-neutral-800 rounded-full p-3 px-5 bg-neutral-800 hover:bg-[#3c2aca]">
         Download
       </button>
     </section>

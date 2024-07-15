@@ -11,15 +11,15 @@ function App() {
 
   return (
     <StoreContext.Provider value={{ updateStorage, setUpdateStorage }}>
-      <div className="min-h-screen flex flex-col justify-between">
+      <div className="relative min-h-screen flex flex-col justify-between">
         <Header />
-        <main className="h-full w-full py-10 px-10">
-          <section className="grid md:grid-cols-12 relative border border-black rounded-2xl overflow-hidden">
+        <main className="h-full w-full">
+          <section className="grid md:grid-cols-10 relative overflow-hidden">
             <span className="polka-dots absolute w-full h-full bg-[#ffffff] opacity-70 bg-[radial-gradient(#000000_0.75px,_#ffffff_0.75px)] [background-size:15px_15px] pointer-events-none"></span>
-            <div className="p-1.5 pr-0  min-w-[333px] md:col-span-3">
+            <div className="max-md:order-2 lg:col-span-3 md:col-span-4 sm:col-span-5 p-4 pt-0 md:pr-0 md:p-10 w-full sm:min-w-[370px]">
               <SideBar />
             </div>
-            <div className="md:col-span-9">
+            <div className="lg:col-span-7 md:col-span-6 sm:col-span-5">
               <Canvas />
             </div>
           </section>

@@ -11,7 +11,7 @@ export default function SideBar() {
       <aside className="w-full bg-[#e2e2e2] flex flex-col">
         <Tabs activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
 
-        <div>
+        <div className="tab-items md:max-h-[71vh] max-h-[100%] overflow-y-scroll">
           {activeMenu === 0 && <IconController />}
           {activeMenu === 1 && <BgController />}
         </div>
