@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { StoreContext } from '../context/storeContext';
-import * as icons from 'react-icons/bi'; // Import all icons from react-icons/bi
+import * as ReactIcons from 'react-icons/bi'; // Import all icons from react-icons/bi
+import * as heroIcons from '@heroicons/react/24/solid';
 
 export default function Canvas() {
   const [storageValue, setStorageValue] = useState({});
@@ -12,29 +13,35 @@ export default function Canvas() {
     setStorageValue(storageData);
   }, [updateStorage]);
 
-  const Icon = ({ name, color, size }) => {
-    const LucidIcon = icons[name];
-    if (!LucidIcon) {
-      return null;
-    }
-    return <LucidIcon size={size} color={color} />;
-  };
+  const Icon =
+    storageValue?.iconSet === 'react' ? ReactIcons[storageValue?.iconName] : heroIcons[storageValue?.iconName];
 
   return (
-    <section className="relative w-full h-full grid place-items-center">
+    <section className="relative w-full h-full grid place-items-center p-5">
       <div
         id="mainIcon"
         style={{
           borderRadius: `${storageValue.bgBorderRadius}%`,
-          padding: `${storageValue.bgPadding}px`,
-          background: `${storageValue.bgColor}`
+          background: `${storageValue.bgColor}`,
+          border: `${storageValue.bgBorder}px solid ${storageValue.bgBorderColor}`
         }}
-        className="w-[512px] aspect-square bg-[#141414] grid place-items-center">
+        className="w-[512px] h-[512px] aspect-square bg-[#141414] grid place-items-center">
         <div style={{ transform: `rotate(${storageValue?.iconRotation}deg)` }}>
-          <Icon name={storageValue?.iconName} color={storageValue?.iconColor} size={storageValue?.iconSize} />
+          {Icon && (
+            <Icon
+              style={{
+                color: storageValue?.iconColor,
+                width: storageValue?.iconSize,
+                height: storageValue?.iconSize
+              }}
+            />
+          )}
         </div>
       </div>
-      <span className="polka-dots absolute w-full h-full bg-[#ffffff] opacity-70 bg-[radial-gradient(#000000_0.75px,_#ffffff_0.75px)] [background-size:15px_15px]"></span>
+
+      <button className="uppercase font-semibold text-white text-sm absolute bottom-5 right-5 border border-neutral-800 rounded-full p-3 px-5 bg-neutral-800 hover:bg-[#3c2aca]">
+        Download
+      </button>
     </section>
   );
 }

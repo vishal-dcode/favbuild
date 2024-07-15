@@ -5,16 +5,14 @@ const menuList = [
 
 export default function Tabs({ activeMenu, setActiveMenu }) {
   return (
-    <div className="flex gap-2 p-2">
+    <div className="flex w-full cursor-pointer justify-between items-center border-b-neutral-600">
       {menuList.map((item) => (
         <div
           key={item.id}
           onClick={() => setActiveMenu(item.id)}
-          className={`flex gap-2 py-2 px-4 cursor-pointer
-                      h-fit rounded-full transition-all ease-in-out duration-100
-                      hover:bg-[#ff4406]
-                      ${activeMenu === item.id ? 'bg-[#ff4406]' : 'bg-black'}`}>
-          <span title={item.title} className="text-xs text-gray-100">
+          className={`p-4 w-full hover:bg-[#26169c] uppercase font-bold grid place-items-center
+                      ${activeMenu === item.id ? 'bg-[#4936d5]' : 'bg-neutral-800'}`}>
+          <span title={item.title} className="text-sm text-gray-100">
             {item.title}
           </span>
         </div>

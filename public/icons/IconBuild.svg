@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="733.33331"
+   height="733.33331"
+   viewBox="0 0 733.33331 733.33331"
+   sodipodi:docname="IconBuild.ai"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath16">
+      <path
+         d="M 0,550 H 550 V 0 H 0 Z"
+         id="path14" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="IconBuild"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,733.33333)">
+    <g
+       id="g10">
+      <g
+         id="g12"
+         clip-path="url(#clipPath16)">
+        <g
+           id="g18"
+           transform="translate(106.5556,550.2222)">
+          <path
+             d="m 0,0 h 336.889 c 58.972,0 106.778,-47.806 106.778,-106.778 v -336.889 c 0,-58.971 -47.806,-106.777 -106.778,-106.777 H 0 c -58.972,0 -106.778,47.806 -106.778,106.777 v 336.889 C -106.778,-47.806 -58.972,0 0,0"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path20" />
+        </g>
+        <path
+           d="M 140.4,409.885 H 97.805 V 452.48 H 140.4 Z"
+           style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path22" />
+        <path
+           d="m 218.223,409.491 h -42.595 v 42.595 h 42.595 z"
+           style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path24" />
+        <path
+           d="M 140.4,331.793 H 97.805 v 42.595 H 140.4 Z"
+           style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path26" />
+        <path
+           d="M 140.4,97.52 H 97.805 v 42.595 H 140.4 Z"
+           style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path28" />
+        <path
+           d="m 218.223,97.52 h -42.595 v 42.595 h 42.595 z"
+           style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path30" />
+        <path
+           d="m 296.298,97.52 h -42.595 v 42.595 h 42.595 z"
+           style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path32" />
+        <path
+           d="m 374.246,97.52 h -42.595 v 42.595 h 42.595 z"
+           style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path34" />
+        <path
+           d="M 452.195,97.52 H 409.6 v 42.595 h 42.595 z"
+           style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path36" />
+        <path
+           d="M 452.195,175.611 H 409.6 v 42.595 h 42.595 z"
+           style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path38" />
+        <path
+           d="M 140.4,175.611 H 97.805 v 42.595 H 140.4 Z"
+           style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path40" />
+        <path
+           d="M 140.4,253.702 H 97.805 v 42.595 H 140.4 Z"
+           style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path42" />
+        <g
+           id="g44"
+           transform="translate(352.779,452.31)">
+          <path
+             d="M 0,0 H -56.481 V -0.224 H -99.077 V -42.819 H -56.481 0.17 c 0,0 56.525,-5.021 56.525,-56.526 0,-51.504 0.126,-56.667 0.126,-56.667 v -42.596 h 42.595 v 42.596 56.596 C 99.416,-99.416 99.077,0 0,0"
+             style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path46" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
