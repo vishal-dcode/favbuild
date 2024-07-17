@@ -10,8 +10,13 @@ const IconOption = ({ label, value, iconSet, onClick }) => {
   const IconComponent = iconSet === 'react' ? allReactIcons[value] : allHeroIcons[value];
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} onClick={() => onClick(value, iconSet)}>
-      <Suspense fallback={<div>Loading...</div>}>{IconComponent && <IconComponent size={24} />}</Suspense>
+    <div
+      className="grid place-items-center "
+      style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
+      onClick={() => onClick(value, iconSet)}>
+      <Suspense fallback={<div className="text-black">Loading...</div>}>
+        {IconComponent && <IconComponent size={32} />}
+      </Suspense>
     </div>
   );
 };
@@ -44,34 +49,53 @@ const IconModal = ({ isOpen, onClose, onSelectIcon }) => {
   };
 
   return (
-    <Modal isOpen={isOpen} onRequestClose={onClose} ariaHideApp={false} contentLabel="Icon Modal">
+    <Modal
+      style={{
+        content: {
+          border: '1px solid #141414',
+          background: '#f2f2f2',
+          borderRadius: '16px',
+          outline: 'none',
+          padding: '0',
+          zIndex: '100000'
+        }
+      }}
+      isOpen={isOpen}
+      onRequestClose={onClose}
+      ariaHideApp={false}
+      contentLabel="Icon Modal">
       <div>
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
-          {['react', 'hero'].map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              style={{
-                padding: '10px',
-                cursor: 'pointer',
-                borderBottom: activeTab === tab ? '2px solid black' : 'none'
-              }}>
-              {tab === 'react' ? 'React Icons' : 'Hero Icons'}
-            </button>
-          ))}
+        <div className="flex justify-between gap-2 items-center p-4 border border-b-black">
+          <div className="flex rounded-full overflow-hidden justify-between items-center">
+            {['react', 'hero'].map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`${
+                  activeTab === tab ? 'bg-[#26169c]' : 'bg-neutral-600'
+                } text-sm h-9 text-white px-4 whitespace-nowrap font-semibold`}>
+                {tab === 'react' ? 'React Icons' : 'Hero Icons'}
+              </button>
+            ))}
+          </div>
+          <button
+            onClick={onClose}
+            className="bg-red-400 h-9 w-9 font-bold text-sm p-2 text-white rounded-full hover:bg-red-600">
+            X
+          </button>
         </div>
         {loading ? (
           <div style={{ textAlign: 'center', padding: '20px' }}>Loading icons...</div>
         ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', gap: '10px' }}>
+          <div
+            className="p-4 bg-white py-6 grid gap-4"
+            style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(32px, 1fr))' }}>
             {iconOptions[activeTab].map((option) => (
               <IconOption key={option.value} {...option} iconSet={activeTab} onClick={handleIconSelect} />
             ))}
           </div>
         )}
       </div>
-
-      <button onClick={onClose}>Close</button>
     </Modal>
   );
 };

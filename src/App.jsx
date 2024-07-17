@@ -15,7 +15,7 @@ function App() {
         <Header />
         <main className="h-full w-full">
           <section className="grid md:grid-cols-10 relative overflow-hidden">
-            <span className="polka-dots absolute w-full h-full bg-[#ffffff] opacity-70 bg-[radial-gradient(#000000_0.75px,_#ffffff_0.75px)] [background-size:15px_15px] pointer-events-none"></span>
+            <span className="polka-dots absolute w-full h-full bg-[#ffffff] opacity-80 bg-[radial-gradient(#000000_0.75px,_#ffffff_0.75px)] [background-size:15px_15px] pointer-events-none"></span>
             <div className="max-md:order-2 lg:col-span-3 md:col-span-4 sm:col-span-5 p-4 pt-0 md:pr-0 md:p-10 w-full sm:min-w-[370px]">
               <SideBar />
             </div>

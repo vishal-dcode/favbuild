@@ -12,15 +12,15 @@ export default function IconPanel() {
   const { setUpdateStorage } = useContext(StoreContext);
   const storageValue = JSON.parse(localStorage.getItem('value')) || {};
 
-  const [iconName, setIconName] = useState(storageValue.iconName || 'BiBorderRadius');
+  const [iconName, setIconName] = useState(storageValue.iconName || 'BiBowlRice');
   const [iconSet, setIconSet] = useState(storageValue.iconSet || 'react');
-  const [iconSize, setIconSize] = useState(storageValue.iconSize || 310);
+  const [iconSize, setIconSize] = useState(storageValue.iconSize || 260);
   const [iconRotation, setIconRotation] = useState(storageValue.iconRotation || 0);
   const [iconColor, setIconColor] = useState(storageValue.iconColor || '#ffffff');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const resetValues = () => {
-    setIconSize(310);
+    setIconSize(260);
     setIconRotation(0);
     setIconColor('#ffffff');
   };
@@ -50,7 +50,9 @@ export default function IconPanel() {
     <div>
       <div className="grid pt-5 p-4">
         <label className="font-semibold mb-1">Select Icon:</label>
-        <div className="relative overflow-hidden flex items-center border border-gray-400 p-2 h-12 rounded-lg hover:bg-neutral-300">
+        <div
+          title={iconName}
+          className="relative overflow-hidden flex items-center border border-gray-400 p-2 h-12 rounded-lg hover:bg-neutral-300">
           <button onClick={() => setIsModalOpen(true)} className="pl-2">
             Open Icon Selector
           </button>
@@ -124,11 +126,15 @@ export default function IconPanel() {
         </div>
       </div>
 
-      <button
-        onClick={resetValues}
-        className="uppercase w-full bg-[#3c2aca] hover:bg-[#23148f] font-semibold grid place-items-center p-3  border-t-neutral-800 text-white">
-        Reset Icon
-      </button>
+      <div className="h-[1px] bg-gray-400 w-full"></div>
+
+      <div className="flex justify-center">
+        <button
+          onClick={resetValues}
+          className="font-display uppercase m-4 w-full bg-neutral-800 hover:bg-[#23148f] rounded-lg font-semibold p-3 border-t-neutral-800 text-white">
+          Reset Icon
+        </button>
+      </div>
     </div>
   );
 }

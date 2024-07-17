@@ -10,9 +10,9 @@ export default function Tabs({ activeMenu, setActiveMenu }) {
         <div
           key={item.id}
           onClick={() => setActiveMenu(item.id)}
-          className={`p-4 w-full hover:bg-[#26169c] uppercase font-bold grid place-items-center
-                      ${activeMenu === item.id ? 'bg-[#4936d5]' : 'bg-neutral-800'}`}>
-          <span title={item.title} className="text-sm text-gray-100">
+          className={`px-4 py-3 w-full hover:bg-[#26169c] uppercase font-bold grid place-items-center
+                      ${activeMenu === item.id ? 'bg-[#26169c]' : 'bg-neutral-800'}`}>
+          <span title={item.title} className="font-display text-lg text-gray-100">
             {item.title}
           </span>
         </div>

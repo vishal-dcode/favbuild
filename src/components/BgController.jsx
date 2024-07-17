@@ -6,16 +6,16 @@ export default function BgPanel() {
   const { setUpdateStorage } = useContext(StoreContext);
   const storageValue = useMemo(() => JSON.parse(localStorage.getItem('value')) || {}, []);
 
-  const [bgBorderRadius, setBgBorderRadius] = useState(storageValue.bgBorderRadius || 25);
+  const [bgBorderRadius, setBgBorderRadius] = useState(storageValue.bgBorderRadius || 0);
   const [bgBorder, setBgBorder] = useState(storageValue.bgBorder || 0);
   const [bgBorderColor, setBgBorderColor] = useState(storageValue.bgBorderColor || '#000000');
-  const [bgColor, setBgColor] = useState(storageValue.bgColor || '#12006c');
+  const [bgColor, setBgColor] = useState(storageValue.bgColor || '#000000');
 
   const resetValues = () => {
-    setBgBorderRadius(25);
+    setBgBorderRadius(0);
     setBgBorder(0);
     setBgBorderColor('#000000');
-    setBgColor('#12006c');
+    setBgColor('#000000');
   };
 
   useEffect(() => {
@@ -97,11 +97,15 @@ export default function BgPanel() {
         </div>
       </div>
 
-      <button
-        onClick={resetValues}
-        className="uppercase w-full bg-[#3c2aca] hover:bg-[#23148f] font-semibold grid place-items-center p-3  border-t-neutral-800 text-white">
-        Reset Background
-      </button>
+      <div className="h-[1px] bg-gray-400 w-full"></div>
+
+      <div className="flex justify-center">
+        <button
+          onClick={resetValues}
+          className="font-display uppercase m-4 w-full bg-neutral-800 hover:bg-[#23148f] rounded-lg font-semibold p-3 border-t-neutral-800 text-white">
+          Reset Background
+        </button>
+      </div>
     </div>
   );
 }
