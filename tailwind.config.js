@@ -7,9 +7,6 @@ export default {
       md: '980px',
       lg: '1100px',
       xl: '1200px'
-    },
-    fontFamily: {
-      display: ['Antonio']
     }
   },
   plugins: []

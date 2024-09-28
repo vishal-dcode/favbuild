@@ -51,7 +51,14 @@ const IconModal = ({ isOpen, onClose, onSelectIcon }) => {
   return (
     <Modal
       style={{
+        overlay: {
+          backgroundColor: 'rgba(0, 0, 0, 0.5)'
+        },
         content: {
+          top: '1rem',
+          left: '1rem',
+          right: '1rem',
+          bottom: '1rem',
           border: '1px solid #141414',
           background: '#f2f2f2',
           borderRadius: '16px',

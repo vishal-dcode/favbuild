@@ -24,11 +24,8 @@ const Accordion = () => {
   return (
     <div>
       {accordionData.map((item) => (
-        <div
-          key={item.id}
-          className={`accordion border border-b-gray-400 ${activeStep === item.id ? 'active' : ''}`}
-          onClick={() => setActiveStep(item.id)}>
-          <div className="accordion-title px-5 py-3 font-semibold ">{item.title}</div>
+        <div key={item.id} onClick={() => setActiveStep(item.id)}>
+          <div className="accordion-title px-5 py-3 cursor-pointer bg-neutral-300  font-semibold ">{item.title}</div>
           {activeStep === item.id && (
             <div className="bg-white px-5 py-3 text-sm">
               <p>{item.content}</p>

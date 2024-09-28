@@ -4,23 +4,24 @@ import SideBar from './components/SideBar.jsx';
 import Canvas from './components/Canvas.jsx';
 
 import { StoreContext } from './context/storeContext.jsx';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 function App() {
   const [updateStorage, setUpdateStorage] = useState({});
+  const exportRef = useRef();
 
   return (
     <StoreContext.Provider value={{ updateStorage, setUpdateStorage }}>
-      <div className="relative min-h-screen flex flex-col justify-between">
+      <div className="relative h-screen max-md:h-full flex flex-col justify-between">
         <Header />
-        <main className="h-full w-full">
-          <section className="grid md:grid-cols-10 relative overflow-hidden">
-            <span className="polka-dots absolute w-full h-full bg-[#ffffff] opacity-80 bg-[radial-gradient(#000000_0.75px,_#ffffff_0.75px)] [background-size:15px_15px] pointer-events-none"></span>
-            <div className="max-md:order-2 lg:col-span-3 md:col-span-4 sm:col-span-5 p-4 pt-0 md:pr-0 md:p-10 w-full sm:min-w-[370px]">
-              <SideBar />
+        <main className="flex-auto h-full w-full">
+          <section className="h-full flex max-md:flex-col relative overflow-hidden">
+            <div className="max-md:order-2 flex-1 w-full">
+              <SideBar exportRef={exportRef} />
             </div>
-            <div className="lg:col-span-7 md:col-span-6 sm:col-span-5">
-              <Canvas />
+            <div className="relative w-full flex-[3] m-3 max-md:m-0 max-md:border-none max-md:rounded-none border border-gray-400 overflow-hidden rounded-lg">
+              <span className="polka-dots absolute w-full h-full bg-[#ffffff] opacity-80 bg-[radial-gradient(#000000_0.75px,_#ffffff_0.75px)] [background-size:15px_15px] pointer-events-none"></span>
+              <Canvas exportRef={exportRef} />
             </div>
           </section>
         </main>

@@ -48,7 +48,7 @@ export default function IconPanel() {
 
   return (
     <div>
-      <div className="grid pt-5 p-4">
+      <div className="grid pt-5 p-5">
         <label className="font-semibold mb-1">Select Icon:</label>
         <div
           title={iconName}
@@ -69,7 +69,7 @@ export default function IconPanel() {
 
       <div className="h-[1px] bg-gray-400 w-full"></div>
 
-      <div className="grid p-4">
+      <div className="grid p-5">
         <div className="flex items-center justify-between">
           <label className="font-semibold mb-1">Size:</label>
           <div className="flex gap-0.5">
@@ -95,7 +95,7 @@ export default function IconPanel() {
 
       <div className="h-[1px] bg-gray-400 w-full"></div>
 
-      <div className="grid p-4">
+      <div className="grid p-5">
         <div className="flex items-center justify-between">
           <label className="font-semibold mb-1">Rotation:</label>
           <div className="flex">
@@ -119,21 +119,11 @@ export default function IconPanel() {
 
       <div className="h-[1px] bg-gray-400 w-full"></div>
 
-      <div className="grid p-4 pb-5">
+      <div className="grid p-5 pb-5">
         <label className="font-semibold mb-2">Icon Color:</label>
         <div>
           <ColorPicker style={{ minWidth: '100%' }} value={iconColor} onChange={setIconColor} hideControls={true} />
         </div>
-      </div>
-
-      <div className="h-[1px] bg-gray-400 w-full"></div>
-
-      <div className="flex justify-center">
-        <button
-          onClick={resetValues}
-          className="font-display uppercase m-4 w-full bg-neutral-800 hover:bg-[#23148f] rounded-lg font-semibold p-3 border-t-neutral-800 text-white">
-          Reset Icon
-        </button>
       </div>
     </div>
   );

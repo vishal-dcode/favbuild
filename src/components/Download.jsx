@@ -33,13 +33,13 @@ const Download = ({ exportRef, isModalOpen, setIsModalOpen }) => {
 
   return (
     isModalOpen && (
-      <div className="fixed inset-0 bg-[rgba(0,0,0,0.5)] flex justify-center items-center">
+      <div className="fixed inset-0 bg-[rgba(0,0,0,0.75)] flex justify-center items-center z-50">
         <div className="bg-neutral-300 border border-neutral-500 text-neutral-200 rounded-2xl overflow-hidden">
           <div className="flex justify-between items-center p-4 border border-b-neutral-500">
             <h2 className="font-semibold text-neutral-900">Choose File Format:</h2>
             <div
               onClick={() => setIsModalOpen(false)}
-              className="text-white text-sm rounded-full grid place-items-center h-6 w-6 bg-neutral-700 hover:text-red-800">
+              className="text-white text-sm rounded-full grid place-items-center h-6 w-6 bg-neutral-700 hover:bg-red-800 cursor-pointer">
               X
             </div>
           </div>
